@@ -13,7 +13,6 @@ from prettify import *
 from minify import *
 from validator import *
 
-
 XML_Editor, _ = loadUiType('XML_Editor.ui')
 
 
@@ -103,11 +102,18 @@ class MainApp(QMainWindow, XML_Editor):
         # self.actionExit.triggered.connect(self.close)
         self.actionExit.triggered.connect(self.show_close_msg_box)
 
+        # Check Errors
         self.action1.triggered.connect(self.op1)
+        # Solve Errors
         self.action2.triggered.connect(self.op2)
+        # Prettify
         self.action3.triggered.connect(self.op3)
+        # Convert To JSON
         self.action4.triggered.connect(self.op4)
+        # Minify
         self.action5.triggered.connect(self.op5)
+        # Compress
+        self.action6.triggered.connect(self.op6)
 
         self.addToolBar(toolbar)
 
@@ -121,11 +127,11 @@ class MainApp(QMainWindow, XML_Editor):
 
     def italicText(self):
         state = self.editor.fontItalic()
-        self.editor.setFontItalic(not (state))
+        self.editor.setFontItalic(not state)
 
     def underlineText(self):
         state = self.editor.fontUnderline()
-        self.editor.setFontUnderline(not (state))
+        self.editor.setFontUnderline(not state)
 
     def boldText(self):
 
@@ -271,33 +277,45 @@ class MainApp(QMainWindow, XML_Editor):
     # msgbox.close()
 
     def handle_buttons(self):
+        # Check Errors
         self.pushButton.clicked.connect(lambda: self.op1())
+        # Solve Errors
         self.pushButton_2.clicked.connect(lambda: self.op2())
         # Prettify
         self.pushButton_3.clicked.connect(lambda: self.op3())
+        # Convert To JSON
         self.pushButton_4.clicked.connect(lambda: self.op4())
         # Minify
         self.pushButton_5.clicked.connect(lambda: self.op5())
+        # Compress
+        self.pushButton_6.clicked.connect(lambda: self.op6())
 
+    # Check Errors
     def op1(self):
         print("op1")
         self.editor.setText(error2(self.editor.toPlainText()))
 
+    # Solve Errors
     def op2(self):
         print("op2")
 
+    # Prettify
     def op3(self):
         print("op3")
         self.editor.setText(prettify_data(scrape_data(self.editor.toPlainText())))
 
+    # Convert To JSON
     def op4(self):
         print("op4")
 
+    # Minify
     def op5(self):
         print("op5")
         self.editor.setText(Minify(self.editor.toPlainText()))
 
-
+    # Compress
+    def op6(self):
+        print("op6")
 
 
 def main():
