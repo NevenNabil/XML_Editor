@@ -1,0 +1,12 @@
+
+اعمل فانكشن بتكرييت نيو ويندو وانههها فى سيف وسيف اس
+detect or get current font size spining tool
+theme
+ مجرد اقتراح انى اخليه بيفتح تابس مش ويندوز
+save     save as      save
+cancel save dont close
+close all dialog in new
+لو بيمسح الفايل المفتوح يطلع وورنينج
+ text changed
+every dialog . show window titile (n++)
+show origional file

@@ -19,13 +19,7 @@ class Ui_MainWindow(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("XML.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet("/*\n"
-"ManjaroMix Style Sheet for QT Applications\n"
-"Author: Jaime A. Quiroga P.\n"
-"Company: GTRONICK\n"
-"Last updated: 25/02/2020, 15:42.\n"
-"Available at: https://github.com/GTRONICK/QSS/blob/master/ManjaroMix.qss\n"
-"*/\n"
+        MainWindow.setStyleSheet("\n"
 "QMainWindow {\n"
 "    background-color:#151a1e;\n"
 "}\n"
@@ -48,10 +42,8 @@ class Ui_MainWindow(object):
 "}\n"
 "QToolButton {\n"
 "    border-style: solid;\n"
-"    border-top-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgb(215, 215, 215), stop:1 rgb(222, 222, 222));\n"
-"    border-right-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0 rgb(217, 217, 217), stop:1 rgb(227, 227, 227));\n"
-"    border-left-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0 rgb(227, 227, 227), stop:1 rgb(217, 217, 217));\n"
-"    border-bottom-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgb(215, 215, 215), stop:1 rgb(222, 222, 222));\n"
+"    \n"
+"    border-color: rgb(34, 43, 46);\n"
 "    border-width: 1px;\n"
 "    border-radius: 5px;\n"
 "    color: #d3dae3;\n"
@@ -67,8 +59,8 @@ class Ui_MainWindow(object):
 "    border-width: 1px;\n"
 "    border-radius: 5px;\n"
 "    color: rgb(0,0,0);\n"
-"    padding: 2px;\n"
-"    background-color: rgb(255,255,255);\n"
+"    padding: 4px;\n"
+"    background-color: rgb(207, 229, 229);\n"
 "}\n"
 "QToolButton:pressed{\n"
 "    border-style: solid;\n"
@@ -107,7 +99,8 @@ class Ui_MainWindow(object):
 "    border-radius: 5px;\n"
 "    color: #d3dae3;\n"
 "    padding: 2px;\n"
-"    background-color: #1c1f1f;\n"
+"    background-color: rgb(72, 92, 94);\n"
+"\n"
 "}\n"
 "QPushButton:pressed{\n"
 "    border-style: solid;\n"
@@ -176,20 +169,20 @@ class Ui_MainWindow(object):
 "    \n"
 "    \n"
 "      spacing: 20px;\n"
-"      padding: 10px20px;\n"
+"      padding: 50px50px;\n"
 "    \n"
 "\n"
 "}\n"
 "\n"
 "QMenuBar::item:selected {\n"
-"      background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(0, 113, 255, 255), stop:1 rgba(91, 171, 252, 255));\n"
+"      background-color: rgb(97, 123, 132);\n"
 "    color: #FFFFFF;\n"
 "}\n"
 "QMenu::item:selected {\n"
 "    border-style: solid;\n"
 "    border-top-color: transparent;\n"
 "    border-right-color: transparent;\n"
-"    border-left-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(0, 113, 255, 255), stop:1 rgba(91, 171, 252, 255));\n"
+"    border-left-color: rgb(97, 123, 132);\n"
 "    border-bottom-color: transparent;\n"
 "    border-left-width: 2px;\n"
 "    color: #000000;\n"
@@ -197,12 +190,13 @@ class Ui_MainWindow(object):
 "    padding-top:4px;\n"
 "    padding-bottom:4px;\n"
 "    padding-right:7px;\n"
+"    background-color: rgb(207, 229, 229);\n"
 "}\n"
 "QMenu::item {\n"
 "    border-style: solid;\n"
 "    border-top-color: transparent;\n"
 "    border-right-color: transparent;\n"
-"    border-left-color: transparent;\n"
+"    border-left-color: rgb(97, 123, 132);\n"
 "    border-bottom-color: transparent;\n"
 "    border-bottom-width: 1px;\n"
 "    color: #000000;\n"
@@ -210,7 +204,6 @@ class Ui_MainWindow(object):
 "    padding-top:4px;\n"
 "    padding-bottom:4px;\n"
 "    padding-right:7px;\n"
-"\n"
 "}\n"
 "QTabWidget {\n"
 "    color:rgb(0,0,0);\n"
@@ -594,60 +587,118 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
         self.label.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("MS Serif")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label.setFont(font)
         self.label.setObjectName("label")
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
-        self.pushButton_3.setSizePolicy(sizePolicy)
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.gridLayout.addWidget(self.pushButton_3, 3, 0, 1, 1)
-        self.editor = QtWidgets.QTextEdit(self.centralwidget)
-        self.editor.setStyleSheet("border:none;")
-        self.editor.setObjectName("editor")
-        self.gridLayout.addWidget(self.editor, 1, 1, 6, 1)
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
-        self.pushButton_2.setSizePolicy(sizePolicy)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout.addWidget(self.pushButton_2, 2, 0, 1, 1)
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout.addWidget(self.pushButton, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
         self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pushButton_4.sizePolicy().hasHeightForWidth())
         self.pushButton_4.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton_4.setFont(font)
         self.pushButton_4.setObjectName("pushButton_4")
-        self.gridLayout.addWidget(self.pushButton_4, 4, 0, 1, 1)
-        self.pushButton_5 = QtWidgets.QPushButton(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
-        self.pushButton_5.setSizePolicy(sizePolicy)
-        self.pushButton_5.setObjectName("pushButton_5")
-        self.gridLayout.addWidget(self.pushButton_5, 5, 0, 1, 1)
+        self.gridLayout.addWidget(self.pushButton_4, 5, 0, 1, 1)
         self.pushButton_6 = QtWidgets.QPushButton(self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pushButton_6.sizePolicy().hasHeightForWidth())
         self.pushButton_6.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton_6.setFont(font)
         self.pushButton_6.setObjectName("pushButton_6")
-        self.gridLayout.addWidget(self.pushButton_6, 6, 0, 1, 1)
+        self.gridLayout.addWidget(self.pushButton_6, 7, 0, 1, 1)
+        self.editor = QtWidgets.QTextEdit(self.centralwidget)
+        self.editor.setStyleSheet("border:none;")
+        self.editor.setObjectName("editor")
+        self.gridLayout.addWidget(self.editor, 1, 1, 8, 1)
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
+        self.pushButton_3.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton_3.setFont(font)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.gridLayout.addWidget(self.pushButton_3, 4, 0, 1, 1)
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
+        self.pushButton_2.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setStyleSheet("")
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.gridLayout.addWidget(self.pushButton_2, 2, 0, 1, 1)
+        self.pushButton_7 = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_7.sizePolicy().hasHeightForWidth())
+        self.pushButton_7.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton_7.setFont(font)
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.gridLayout.addWidget(self.pushButton_7, 8, 0, 1, 1)
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
+        self.pushButton.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("")
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout.addWidget(self.pushButton, 1, 0, 1, 1)
+        self.pushButton_5 = QtWidgets.QPushButton(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
+        self.pushButton_5.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Condensed")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton_5.setFont(font)
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.gridLayout.addWidget(self.pushButton_5, 3, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -771,6 +822,10 @@ class Ui_MainWindow(object):
         self.actionSave_As.setObjectName("actionSave_As")
         self.action5 = QtWidgets.QAction(MainWindow)
         self.action5.setObjectName("action5")
+        self.action6 = QtWidgets.QAction(MainWindow)
+        self.action6.setObjectName("action6")
+        self.actionDecompress = QtWidgets.QAction(MainWindow)
+        self.actionDecompress.setObjectName("actionDecompress")
         self.menuEdit.addAction(self.actionCopy)
         self.menuEdit.addAction(self.actionCut)
         self.menuEdit.addAction(self.actionPaste)
@@ -795,9 +850,13 @@ class Ui_MainWindow(object):
         self.menuFile.addAction(self.actionExit)
         self.menuOperations.addAction(self.action1)
         self.menuOperations.addAction(self.action2)
+        self.menuOperations.addSeparator()
+        self.menuOperations.addAction(self.action5)
         self.menuOperations.addAction(self.action3)
         self.menuOperations.addAction(self.action4)
-        self.menuOperations.addAction(self.action5)
+        self.menuOperations.addSeparator()
+        self.menuOperations.addAction(self.action6)
+        self.menuOperations.addAction(self.actionDecompress)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuEdit.menuAction())
         self.menubar.addAction(self.menuFormat.menuAction())
@@ -806,27 +865,45 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        MainWindow.setTabOrder(self.pushButton, self.pushButton_2)
+        MainWindow.setTabOrder(self.pushButton_2, self.pushButton_3)
+        MainWindow.setTabOrder(self.pushButton_3, self.pushButton_4)
+        MainWindow.setTabOrder(self.pushButton_4, self.pushButton_6)
+        MainWindow.setTabOrder(self.pushButton_6, self.pushButton_7)
+        MainWindow.setTabOrder(self.pushButton_7, self.editor)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Operations"))
-        self.pushButton_3.setText(_translate("MainWindow", "PushButton"))
-        self.pushButton_2.setText(_translate("MainWindow", "PushButton"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
-        self.pushButton_4.setText(_translate("MainWindow", "PushButton"))
-        self.pushButton_5.setText(_translate("MainWindow", "PushButton"))
-        self.pushButton_6.setText(_translate("MainWindow", "PushButton"))
+        self.pushButton_4.setText(_translate("MainWindow", "Convert To JSON"))
+        self.pushButton_6.setText(_translate("MainWindow", "Compress"))
+        self.editor.setToolTip(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
+        self.pushButton_3.setText(_translate("MainWindow", "prettify"))
+        self.pushButton_2.setText(_translate("MainWindow", "Solve Errors"))
+        self.pushButton_7.setText(_translate("MainWindow", "Decompress"))
+        self.pushButton.setText(_translate("MainWindow", "Check Errors"))
+        self.pushButton_5.setText(_translate("MainWindow", "Minify"))
         self.menuEdit.setTitle(_translate("MainWindow", "Edit"))
         self.menuFormat.setTitle(_translate("MainWindow", "Format"))
         self.menuStyle.setTitle(_translate("MainWindow", "Style"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuOperations.setTitle(_translate("MainWindow", "Operations"))
         self.actionCopy.setText(_translate("MainWindow", "Copy"))
+        self.actionCopy.setToolTip(_translate("MainWindow", "Copy   Ctrl+C"))
+        self.actionCopy.setShortcut(_translate("MainWindow", "Ctrl+C"))
         self.actionCut.setText(_translate("MainWindow", "Cut"))
+        self.actionCut.setToolTip(_translate("MainWindow", "Cut   Ctrl+X"))
+        self.actionCut.setShortcut(_translate("MainWindow", "Ctrl+X"))
         self.actionPaste.setText(_translate("MainWindow", "Paste"))
+        self.actionPaste.setToolTip(_translate("MainWindow", "Paste   Ctrl+V"))
+        self.actionPaste.setShortcut(_translate("MainWindow", "Ctrl+V"))
         self.actionUndo.setText(_translate("MainWindow", "Undo"))
+        self.actionUndo.setToolTip(_translate("MainWindow", "Undo   Ctrl+Z"))
+        self.actionUndo.setShortcut(_translate("MainWindow", "Ctrl+Z"))
         self.actionRedo.setText(_translate("MainWindow", "Redo"))
+        self.actionRedo.setToolTip(_translate("MainWindow", "Redo   Ctrl+Y"))
+        self.actionRedo.setShortcut(_translate("MainWindow", "Ctrl+Y"))
         self.actionFont.setText(_translate("MainWindow", "Font"))
         self.actionBold.setText(_translate("MainWindow", "Bold"))
         self.actionItalic.setText(_translate("MainWindow", "Italic"))
@@ -836,23 +913,23 @@ class Ui_MainWindow(object):
         self.actionRight.setText(_translate("MainWindow", "Right"))
         self.actionColor.setText(_translate("MainWindow", "Color"))
         self.actionNew.setText(_translate("MainWindow", "New"))
+        self.actionNew.setToolTip(_translate("MainWindow", "New   Ctrl+N"))
+        self.actionNew.setShortcut(_translate("MainWindow", "Ctrl+N"))
         self.actionOpen.setText(_translate("MainWindow", "Open"))
+        self.actionOpen.setToolTip(_translate("MainWindow", "Open   Ctrl+O"))
+        self.actionOpen.setShortcut(_translate("MainWindow", "Ctrl+O"))
         self.actionSave.setText(_translate("MainWindow", "Save"))
-        self.actionExit.setText(_translate("MainWindow", "Exit"))
-        self.action1.setText(_translate("MainWindow", "1"))
-        self.action2.setText(_translate("MainWindow", "2"))
-        self.action3.setText(_translate("MainWindow", "3"))
-        self.action4.setText(_translate("MainWindow", "4"))
+        self.actionSave.setToolTip(_translate("MainWindow", "Save   Ctrl+S"))
+        self.actionSave.setShortcut(_translate("MainWindow", "Ctrl+S"))
+        self.actionExit.setText(_translate("MainWindow", "Close"))
+        self.actionExit.setToolTip(_translate("MainWindow", "Close   Ctrl+F4"))
+        self.actionExit.setShortcut(_translate("MainWindow", "Ctrl+F4"))
+        self.action1.setText(_translate("MainWindow", "Check Errors"))
+        self.action2.setText(_translate("MainWindow", "Solve Errors"))
+        self.action3.setText(_translate("MainWindow", "prettify"))
+        self.action4.setText(_translate("MainWindow", "Convert To JSON"))
         self.actionSave_As.setText(_translate("MainWindow", "Save As"))
-        self.action5.setText(_translate("MainWindow", "5"))
+        self.action5.setText(_translate("MainWindow", "Minify"))
+        self.action6.setText(_translate("MainWindow", "Compress"))
+        self.actionDecompress.setText(_translate("MainWindow", "Decompress"))
 import images_rc
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
